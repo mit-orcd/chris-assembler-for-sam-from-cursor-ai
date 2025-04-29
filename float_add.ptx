@@ -1,0 +1,23 @@
+.version 7.0
+.target sm_50
+.address_size 64
+
+.visible .entry float_add(
+    .param .f64 a,
+    .param .f64 b,
+    .param .f64 result
+) {
+    .reg .f64 %f<3>;
+
+    // Load input parameters
+    ld.param.f64 %f1, [a];
+    ld.param.f64 %f2, [b];
+
+    // Add the numbers
+    add.f64 %f3, %f1, %f2;
+
+    // Store the result
+    st.param.f64 [result], %f3;
+
+    ret;
+} 

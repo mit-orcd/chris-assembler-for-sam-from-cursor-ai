@@ -1,0 +1,21 @@
+# Compiled binaries
+hello
+float_add
+float_add_ptx
+
+# Object files
+*.o
+*.obj
+
+# Compiled CUDA files
+*.cubin
+*.fatbin
+
+# System files
+.DS_Store
+.vscode/
+.idea/
+
+# Build directories
+build/
+bin/ 
